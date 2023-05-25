@@ -42,7 +42,7 @@
 .validation .content img {
     display: block;
     margin: 0 auto;
-    width: 170px;
+    width: 95px;
      transition: .3s;
 
 }
@@ -71,7 +71,7 @@ form img {
     width: 190px;
     margin: 15px auto;
     display: block;
-    background-color: yellow;
+    background-color: #FED30A;
     color: black;
     height: 40px;
     border-radius: 40px;
