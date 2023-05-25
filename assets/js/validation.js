@@ -44,7 +44,10 @@ function initApp(user){
 
         Olá <strong>`+user +`</strong> Seja Bem-vindo!
     </div>
+    <div style="position: absolute;top: 0;right: 0;margin: 25px;color: black; ">
+    <button id="btnFullScreen" onclick="fullScreen()"><i style="color: black !important" class="fa-solid fa-expand"></i></button>
 
+</div>
     
   `;
   setTimeout(function init(){
