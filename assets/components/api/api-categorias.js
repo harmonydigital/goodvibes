@@ -1,4 +1,4 @@
-datadb = [{ 
+data = [{ 
     id:Math.floor(Math.random() * 1000).toString(),
     name:'Para Beber', 
     key:'Comer', 
@@ -925,7 +925,7 @@ datadb = [{
 
 
 ]
-console.log(datadb) 
+console.log(data) 
 
 data=[] 
 database=[]  
@@ -945,7 +945,7 @@ JSON.parse(localStorage.getItem("cardapio")).map((cardBdmap)=>{
     prods=""
  
     
-    datadb.map((apiData)=>{ 
+    data.map((apiData)=>{ 
          
         container.childNodes[1].innerHTML += ` 
 
