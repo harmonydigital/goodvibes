@@ -39,7 +39,8 @@ function initApp(user){
 
   userView.innerHTML= `  
     <div style="padding: 0 15px; "> 
-      <img src="assets/images/user.png" alt="">
+     <!-- <img src="assets/images/user.png" alt=""> -->
+     <i style="color:black;" class="fa-regular fa-user"></i>
 
         Olá <strong>`+user +`</strong> Seja Bem-vindo!
     </div>

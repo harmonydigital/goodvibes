@@ -1109,7 +1109,10 @@ JSON.parse(localStorage.getItem("cardapio")).map((cardBdmap)=>{
   itensTotal=0
   list=null
 
-   cartPreview.innerHTML= `<div><button id="cartPreview" onclick="showCart()"><img src="assets/images/shopping-cart.png" alt=""></button>      </div>`;  
+   cartPreview.innerHTML= `<div><button id="cartPreview" onclick="showCart()">
+   <i class="fa-solid fa-cart-shopping"></i>
+   </button>   
+      </div>`;  
    cartContainer.innerHTML= `<div class="content"><h2>Pedido</h2><p ><span id="itensTotal"></span>  Itens na Cesta</p></div>`;  
    msg="Olá, Pedido via APP Canoas" + "%0a" + "Nome: "+inputUserName
    retirada="";
@@ -1145,7 +1148,8 @@ JSON.parse(localStorage.getItem("cardapio")).map((cardBdmap)=>{
 
                 
             
-                    cartPreview.innerHTML= `    <div >     <button id="cartPreview" onclick="showCart()"><img src="assets/images/shopping-cart.png" alt=""></button> <span class="qtdIcon">`+cartQtd +` </span>   </div>  `;  
+                    cartPreview.innerHTML= `    <div >     <button id="cartPreview" onclick="showCart()">
+                    <i class="fa-solid fa-cart-shopping"></i></button> <span class="qtdIcon">`+cartQtd +` </span>   </div>  `;  
                     cartContainer.innerHTML+= `  
                     
                     <div class="produto">
