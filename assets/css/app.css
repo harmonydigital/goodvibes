@@ -6,6 +6,10 @@ body {
     max-width: 800px; 
     margin: 0 auto;
 }
+button#btnFullScreen {
+    background: transparent;
+    color: white;
+}
 
 button {
     background:transparent;

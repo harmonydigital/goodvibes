@@ -1,6 +1,6 @@
 .cart {
     position: fixed;
-    background: #fff;
+    background: #fed30a;
     height: 100%;
     left: 0;
     width: 100%;
@@ -14,7 +14,7 @@
     padding: 0px 20px;
     font-size: 25px;
     width: 200px;
-    color: #E5040E;
+    color: black;
     margin: 10px 0px 15px;
     line-height: 1.1;
 }
@@ -66,14 +66,16 @@ span.qtdIcon {
     left:0;
 }
 .total button {
-    background: #E5040E;
-    color: white;
+    background: #FED30A;
+    color: black;
     /* border: 1px solid; */
     border-radius: 20px;
     height: 40px;
     width: 200px;
     padding: 0 25px;
     margin: 10px auto;
+    text-transform: capitalize;
+    font-weight: 400;
 }
 .cartProduct {
     display: flex;

@@ -1,3 +1,19 @@
+
+ 
+fullScreen=()=>{
+    var element = document.documentElement;
+    
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    }
+} 
+
 data = [{ 
     id:Math.floor(Math.random() * 1000).toString(),
     name:'Para Beber', 

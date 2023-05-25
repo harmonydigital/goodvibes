@@ -10,9 +10,11 @@
     padding:0px;
     z-index: 999;
     background-color: black;
-    display:block !important;
+   
 }
-
+button#btnFullScreen svg {
+    color: yellow !important;
+}
 .validation  span.number {
     display: flex;
     justify-content: center;
