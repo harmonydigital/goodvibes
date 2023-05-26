@@ -78,6 +78,9 @@ button.tablinks .img2 {
   box-shadow: inset 3px 2px 5px #FED30A;
 
 }
+.categories .tab button {
+  font-size: 1.1rem;
+}
 .tab.sub button.active {
   background-color: transparent;
   border-bottom: 1px solid #FFF212;
