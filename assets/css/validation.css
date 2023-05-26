@@ -24,8 +24,7 @@ button#btnFullScreen svg {
 }
 .validation .content {
     width: 100%;
-    margin: auto;
-    padding-top: 20%;
+    margin: auto; 
     transition: .3s;
 
 }
@@ -48,6 +47,14 @@ button#btnFullScreen svg {
     width: 95px;
      transition: .3s;
 
+}
+.content-text h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    font-weight: 700;
+}
+.content-text h1 strong {
+    color:#FED30A
 }
 .validation .content p{
     font-size: 11px;
@@ -78,6 +85,7 @@ form img {
     color: black;
     height: 40px;
     border-radius: 40px;
+    font-weight: 700;
     position: relative;
 }
 .validation button img {
