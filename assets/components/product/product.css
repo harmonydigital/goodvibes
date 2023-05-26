@@ -6,7 +6,7 @@
     font-family: 'Lexend Deca', sans-serif;
     align-items: center;
     height: 100px;
-    margin: 5px 10px;}
+    margin: 10px 10px;}
 .produto img {
     width: 80px;
     border-radius: 5px;
@@ -42,8 +42,8 @@
     font-size: 14px;
 }
 .produto .quantidade button {
-    width: 55px;
-    height: 27px;
+    width: 60px;
+    height: 32px;
     border: 0px;
     border-radius: 12px;
     color: black;
