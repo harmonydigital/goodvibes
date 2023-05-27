@@ -1,7 +1,7 @@
 .menu {
     width: 100%;
     background: #FED30A;
-    height: 55px;
+    height: 65px;
     position: fixed;
     z-index: 99;
     left: 0px;
@@ -18,6 +18,9 @@
 .menu button {
     background: transparent;
     border: 0px;
+    width: 90px;
+    height: 33px;
+    font-size: 1.5rem;
 }
 
 .menu svg {

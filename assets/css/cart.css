@@ -40,12 +40,13 @@ span.qtdIcon {
     height: 20px;
     display: flex;
     justify-content: center;
-    top: 0;
+    top: 6px;
     border-radius: 20px;
     align-items: center;
     color: #ffff;
-    margin: 0 18px;
-    font-size: 10px;
+    margin: 0 51px;
+    font-size: 14px;
+    padding: 4px;
 }
 
 

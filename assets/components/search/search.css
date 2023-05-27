@@ -12,7 +12,7 @@
 }
  
 .search form .fa-magnifying-glass {
-    left: 30px;
+    left: 15px;
     position: relative;
 }
 .search form .fa-arrow-right {
@@ -34,6 +34,12 @@
 .search svg {
     color: black;
 }
+
+.search label {
+    align-items: center;
+
+}
+
 .search input::-webkit-input-placeholder { /* Edge */
     color: #9b9b9b;
     font-weight: 600;
@@ -52,7 +58,7 @@
 
   }
   .contentSearch {
-    background: #FFF212;
+    background: #FED30A;
     width: 100%;
     position: fixed;
     height: 100%;
