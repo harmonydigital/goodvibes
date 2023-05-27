@@ -1295,7 +1295,9 @@ STATUSMESA=false
     ">CHAVE </br>  12996218661 </span>
            </div>
         
-             <button type="submit" id="submitCheck">ENVIAR MEU PEDIDO </button>
+             <button type="submit" id="submitCheck">ENVIAR MEU PEDIDO 
+             <i class="fa-solid fa-paper-plane"></i>
+             </button>
         </div> 
         `;
   }
