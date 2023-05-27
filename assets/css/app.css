@@ -15,7 +15,33 @@ button {
     background:transparent;
     border:0;
 }
+.controls button svg {
+    color: black;
+    margin: 20px;
+}
+div#cart .controls {
+    background: white;
+}
 
+.controls button {
+    /* background: red; */
+   
+    margin: 10px;
+    color: black;
+    height: 50px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.controls button:first-child {
+    justify-content: flex-start;
+   
+}
+.controls button:last-child {
+    justify-content: flex-end;
+ 
+}
 .categories {
     margin: 20px auto;
 }
