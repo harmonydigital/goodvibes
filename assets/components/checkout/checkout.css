@@ -79,8 +79,12 @@ form#checkoutform .mylabel label {
     border: 1px solid;
     border-right: 0;
        height: 44px;
+    align-items: center;
 }
 
+form#checkoutform .mylabel label svg {
+    margin: 15px;
+}
 div#rrcode {
     background: white;
     border-radius: 10px;

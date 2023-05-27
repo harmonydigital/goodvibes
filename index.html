@@ -48,7 +48,7 @@
           bottom: 0px;
           height: 46px;
           width: 40px;  ">  
-        <img src="assets/images/inputs/archive.png" style="margin-top: 16px;">
+        <img src="assets/images/inputs/archive.png"  >
         </label>
         <select id="selectValidate" required>
           <option value="1">Selecione a forma de retirada</option>
@@ -90,7 +90,7 @@
         </label> 
         <div class="mylabel select">
           <label>
-          <img src="assets/images/inputs/archive.png" style="margin-top: 16px;">
+          <img src="assets/images/inputs/archive.png" >
           </label>
           <select onchange="formaRetirada()" id="selectCheckout">
             <option value="1">Selecione a forma de retirada</option>
@@ -100,19 +100,27 @@
         </div>
         <div id="setMesa" class="mylabel"  style="display:none">
           <label style="height:48px;"> 
-          <img src="assets/images/inputs/mesa.png" style="margin-top: 16px;">  
+          <img src="assets/images/inputs/mesa.png"  >  
           </label>
           <input id="inputMesa"  type="number" placeholder="Digite o numero da mesa">
         </div>
         <div id="whatsappId"  style="display: none; ">
           <!-- <span>Receba notificação via whatsapp </span> -->
           <div id="setPhone" class="mylabel" >
-            <label style="height:48px;">  
-            <img src="assets/images/inputs/whats.png" style="margin-top: 16px;">  
+            <label style="height:48px;">   
+            <i class="fa-solid fa-location-dot"></i>
             </label>
-            <input id="inputMesa"  type="text" placeholder="Digite o Endereço de entrega...">
+            <input id="inputMesa"  type="text" placeholder="Endereço de entrega...">
+          </div>
+
+          <div id="setEnd" class="mylabel" >
+            <label style="height:48px;">  
+            <img src="assets/images/inputs/whats.png" >  
+            </label>
+            <input id="inputMesa"  type="number" placeholder="Numero celular whatsapp">
           </div>
         </div>
+        
       </div>
       <div style="position: relative;">
         <label> 

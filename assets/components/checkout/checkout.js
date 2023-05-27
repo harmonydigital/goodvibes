@@ -5,13 +5,8 @@ inpuMMesa=document.getElementById('inputMesa')
 whatsappId=document.getElementById('whatsappId')
 inpuMWhats="" 
 
-console.log('checkout',relogio())
-function showNumber(){
-
-    var n=100;
-    return n+=1
-  
-}
+ 
+function showNumber(){  var n=100;  return n+=1 }
 getCheckout=()=>{ 
  
 

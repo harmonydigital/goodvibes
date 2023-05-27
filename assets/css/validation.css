@@ -69,8 +69,7 @@ button#btnFullScreen svg {
     position: relative; 
    
 }
-form img {
-    margin-top: 15px;
+form img { 
     position: absolute;
     z-index: 99;
     width: 14px;
