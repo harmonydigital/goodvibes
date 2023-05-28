@@ -198,28 +198,7 @@
     </form>
     <div id="searchResult"></div>
   </div>
-  <div style="display:none;" class="banners">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="assets/images/bannercamarao.png" alt="" >
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/images/bannerdrinks.png" alt="" >
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/images/bannercerveja.png" alt="" >
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/images/bannertapioca.png" alt="" >
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/images/bannerpanqueca.png" alt="" >
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
+   
   <div id="categories" class="categories"> </div>
 </body>
     
@@ -235,10 +214,12 @@
  <script src="assets/components/categorias/categorias.js"></script>
  
  <script src="assets/components/api/api-categorias.js"></script>
+ 
  <script src="assets/components/orders/ordermore.js"></script>
 
  <script src="assets/components/search/search.js"></script>
  <script src="assets/js/validation.js"></script>
+ 
  <script src="assets/js/cart.js"></script>
  <script src="assets/components/swiper/swiper.js"></script>
  <script src="assets/js/app.js"></script>
@@ -603,14 +584,17 @@
  })
  const currencyMenu=db.collection('cardapio') 
  
- currencyMenu.onSnapshot((snapshot) => {  
+ currencyMenu.onSnapshot((snapshot) => { 
+  
+       var data=[]
         snapshot.forEach((doc) => { 
-          cardapiobd.push(doc.data()) 
+          data.push(doc.data()) 
             
         }); 
 
-        localStorage.setItem("cardapio",JSON.stringify(cardapiobd))
-       
+        getApi(categoriesContainer,data)
+        // localStorage.setItem("cardapio",JSON.stringify(cardapiobd))
+        
     }, (error) => {
             console.log('Erro Notificações')
 
