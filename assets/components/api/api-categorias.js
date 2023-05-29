@@ -29,26 +29,44 @@ STATUSMESA=false
 //     })
 // })
  getApi=(container, databd)=>{
+
+    console.log(databd)
     container.innerHTML =` <div class="tab"> </div>`;
     prods=""
     getdatabd=databd
   
- 
-    getdatabd.map((databdMap)=>{
+    if(data.length==0){
+        getdatabd.map((databdMap)=>{
        
-      databdMap.dataProd.map((mapProd)=>{
+            databdMap.dataProd.map((mapProd)=>{
+              data.push(mapProd)
+      
+              
+            })
+          //   console.log(data)
+      
+          })
+    }else{
+        data=[]
+        getdatabd.map((databdMap)=>{
+       
+            databdMap.dataProd.map((mapProd)=>{
+              data.push(mapProd)
+      
+              
+            })
+          //   console.log(data)
+      
+          })
 
-        data.push(mapProd)
-
-      })
-    //   console.log(data)
-
-    })
+    }
+ 
+   
      
 
 
 
-        
+        conosole.log('data..',data)
     data.map((apiData)=>{ 
          
         container.childNodes[1].innerHTML += ` 
@@ -129,7 +147,7 @@ STATUSMESA=false
                 }) 
         }) 
      }) 
-
+     openTable()
  }
   
 //  categoriesContainer ? getApi(categoriesContainer) : console.log("..");
@@ -411,26 +429,27 @@ closeCheckout=()=>{
 
     ///update
    
+openTable=()=>{
+    setTimeout(function(){
 
-setTimeout(function(){
-
-    tabcontent = document.getElementsByClassName("tabcontent");
-    tablinks = document.getElementsByClassName("tablinks");
-    tabcontent[0].style.cssText="display:block"
-    tabcontent[1].style.cssText="display:block"
-    tablinks[0].setAttribute("class", "tablinks active")
-    var swiper = new Swiper(".mySwiperTabs", {
-        slidesPerView: 2,
-        cssMode: true,
-         autoplay: {
-        delay: 5500,
-        disableOnInteraction: false,
-        },
+        tabcontent = document.getElementsByClassName("tabcontent");
+        tablinks = document.getElementsByClassName("tablinks");
+        tabcontent[0].style.cssText="display:block"
+        tabcontent[1].style.cssText="display:block"
+        tablinks[0].setAttribute("class", "tablinks active")
+        var swiper = new Swiper(".mySwiperTabs", {
+            slidesPerView: 2,
+            cssMode: true,
+             autoplay: {
+            delay: 5500,
+            disableOnInteraction: false,
+            },
+            
+            });
+    
         
-        });
-
-
-
-
-
-}, 2000);
+    
+    
+    
+    }, 2000);
+}
