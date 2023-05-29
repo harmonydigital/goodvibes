@@ -65,8 +65,7 @@ STATUSMESA=false
      
 
 
-
-        conosole.log('data..',data)
+ 
     data.map((apiData)=>{ 
          
         container.childNodes[1].innerHTML += ` 
