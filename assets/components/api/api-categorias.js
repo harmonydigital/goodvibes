@@ -125,7 +125,7 @@ STATUSMESA=false
                                 <img src="`+productsMap.img +`" alt="" ></img>
                             <div class="prod-val">
                                 <h3 class="title-prod">`+productsMap.name +`</h3> 
-                                <span class="valor">`+productsMap.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})+`</span>
+                                <span class="valor">`+parseInt(productsMap.price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})+`</span>
                             </div>
                             <div class="quantidade">
                                 <button key="`+productsMap.id +`" onclick="addProd(this,`+productsMap.id +`); ">+</button>
