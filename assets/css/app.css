@@ -13,6 +13,8 @@ span.outLine {
     width: 170px;
     border-radius: 20px;
     padding: 5px 1px;
+    margin: 0 auto 20px !important;
+    display: block;
 }
 button#btnFullScreen {
     background: transparent;
