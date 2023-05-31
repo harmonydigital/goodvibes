@@ -6,6 +6,14 @@ body {
     max-width: 800px; 
     margin: 0 auto;
 }
+span.outLine {
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 3px solid;
+    width: 170px;
+    border-radius: 20px;
+    padding: 5px 1px;
+}
 button#btnFullScreen {
     background: transparent;
     color: white;
