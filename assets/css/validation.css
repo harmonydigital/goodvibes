@@ -100,6 +100,7 @@ select:invalid { color: red; }
     font-weight: bold;
     font-family: 'Lexend Deca', sans-serif;
     width: 280px;
+    display: block;
 }
 .validation button img {
     left: inherit;
