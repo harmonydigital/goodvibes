@@ -6,15 +6,17 @@ body {
     max-width: 800px; 
     margin: 0 auto;
 }
+.socialmedia {
+    margin: 20px auto;
+}
 span.outLine {
     font-weight: 600;
-    font-size: 1.1rem;
-    border: 3px solid;
-    width: 170px;
+    font-size: 0.88rem;
+    border: 2px solid;
+    width: 147px;
     border-radius: 20px;
     padding: 5px 1px;
-    margin: 0 auto 20px !important;
-    display: block;
+    margin: 0 auto 15px !important;
 }
 button#btnFullScreen {
     background: transparent;
