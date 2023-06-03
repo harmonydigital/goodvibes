@@ -1,7 +1,11 @@
 formcheckout=document.getElementById('checkoutform')
-totalfinesh=document.getElementById("totalfinesh")
-// itensTotal=document.getElementById("totalfinesh")
+totalfinesh=document.getElementById("totalfinesh") 
+
 inpuMMesa=document.getElementById('inputMesa')
+
+inputLocation=document.getElementById('inputLocation')
+locationvalue=""
+
 whatsappId=document.getElementById('whatsappId')
 inpuMWhats="" 
 
@@ -20,31 +24,19 @@ getCheckout=()=>{
     retiradavalue=0
 
     
+ 
 
-    areaObs.addEventListener('change', function(event){
-        
+    areaObs.addEventListener('change', function(event){ 
         observacaoPedido=event.target.value
         obs=observacaoPedido
-        obsData={'observacaoPedido':observacaoPedido}
-        // allordersBuy.push(obsData)
-        console.log(obs)
-
-        // prodsSelct.push(obsData) 
-      
+        obsData={'observacaoPedido':observacaoPedido} 
 
     })
-    allordersBuy=[{ 
-        idPedido:Math.floor(Math.random() * 1000).toString(),
-        data:dataHora(),
-        hora:relogio(),
-        itens:prodsSelct,
-        observacao:obs
 
-    }]
+
     // VALIDA CAMPO HOME
     if(text=="Mesa"){
-        mesaCheck=document.getElementById('selectMesaCheckout')
-        
+        mesaCheck=document.getElementById('selectMesaCheckout') 
     }
 
     // VALIDA CAMPO CHECKOUT 
@@ -52,6 +44,8 @@ getCheckout=()=>{
         mesaCheck.parentNode.style.cssText="display:flex"   
 
     }
+ 
+    // Open Checkout container
     containerCheckout.style.cssText="display:block"
 
 
@@ -81,6 +75,7 @@ formaRetirada=()=>{
         inpuMVaue=0
     }
 
+
     //Mesa Digitada
     setMesa.addEventListener('focusout', function(e){ 
         inpuMVaue=document.getElementById('inputMesa').value.toString()   
@@ -91,6 +86,20 @@ formaRetirada=()=>{
               inpuMWhats=e.target.value.toString()  
           
     })
+    //Endereço Digitado
+    inputLocation.addEventListener('focusout', function(e){
+        console.log(e.target.value)
+        locationvalue=e.target.value
+    })
+    allordersBuy=[{ 
+        idPedido:Math.floor(Math.random() * 1000).toString(),
+        data:dataHora(),
+        hora:relogio(),
+        itens:prodsSelct,
+        location:locationvalue, 
+        observacao:obs
+
+    }]
 }
 
 

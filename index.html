@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <!-- <meta name="theme-color" content="#FB6E3B"> -->
+    <meta name="theme-color" content="black">
     <title>Good Vibes Cardápio Delivery - A que salva o Role</title>
     <link rel="shortcut icon" href="favico.png" type="image/png">
     <link rel="stylesheet" href="assets/css/app.css">  
@@ -134,7 +134,7 @@
             <label style="height:48px;">   
             <i class="fa-solid fa-location-dot"></i>
             </label>
-            <input id="inputMesa"  type="text" placeholder="Endereço de entrega...">
+            <input id="inputLocation"  type="text" placeholder="Endereço de entrega..."  >
           </div>
 
           <div id="setEnd" class="mylabel" >
@@ -227,7 +227,8 @@
 </body>
     
   
-    </html>
+ </html>
+
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
  <script src="assets/components/api/apidb.js"></script>
@@ -288,6 +289,18 @@
    let btnSubmitOrder=e.submitter
 
    
+
+   allordersBuy=[{ 
+        idPedido:Math.floor(Math.random() * 1000).toString(),
+        data:dataHora(),
+        hora:relogio(),
+        itens:prodsSelct,
+        location:locationvalue, 
+        observacao:obs
+
+    }]
+
+
    
       if(inpuMVaue!=0){ 
 
@@ -554,9 +567,20 @@
               db.collection('delivery').doc(userNameString).set({  
                 "name":userNameString,
                 "id":Math.random() * 100, 
-                "whatsapp":inpuMWhats,
+                "whatsapp":inpuMWhats, 
                 orders:allordersBuy  //<==================Pedidos Recebidos
+                
               }) 
+
+              console.log(
+                {  
+                "name":userNameString,
+                "id":Math.random() * 100, 
+                "whatsapp":inpuMWhats, 
+                orders:allordersBuy  //<==================Pedidos Recebidos
+                
+              }
+              )
 
               console.log('Primeira Compra',{  
                 "name":userNameString,
