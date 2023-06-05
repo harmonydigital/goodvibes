@@ -32,7 +32,6 @@ STATUSMESA=false
 
  getApi=(container, databd)=>{
 
-    console.log(databd)
     container.innerHTML =` <div class="tab"> </div>`;
     prods=""
     getdatabd=databd

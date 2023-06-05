@@ -15,6 +15,7 @@ function exitSection(){
 
   location.reload() 
 
+  
 }
 
 function validation(event){

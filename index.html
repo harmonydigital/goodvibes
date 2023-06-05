@@ -73,8 +73,7 @@
         </div>
       </div>
     </form>
-  </div>
-
+  </div> 
 
     <script>
     // style="background-image: url(assets/images/bg-validation.png);"
@@ -84,10 +83,10 @@
 
 
      if(window.matchMedia("(max-width: 700px)").matches){
-      console.log('mobile')
+      // console.log('mobile')
       loginContainer.style.cssText='background-image: url(assets/images/bg-validation.png);'
      }else{
-      console.log('Desktop')
+      // console.log('Desktop')
       loginContainer.style.cssText='background-image: url(assets/images/bg-desktop.png);'
 
      }
@@ -284,7 +283,7 @@
       let entregaPed=false
 
 
- //UPDATE
+ //SUBMIT CHECKOUT AND UPDATE 
  form.addEventListener('submit', function(e){
 
     e.preventDefault()  
@@ -295,32 +294,27 @@
     
 
     allordersBuy=[{ 
-          idPedido:Math.floor(Math.random() * 1000).toString(),
-          data:dataHora(),
-          hora:relogio(),
-          itens:prodsSelct,
-          location:locationvalue, 
-          observacao:obs
-
-      }]
+        idPedido:Math.floor(Math.random() * 1000).toString(),
+        data:dataHora(),
+        hora:relogio(),
+        itens:prodsSelct,
+        location:locationvalue, 
+        observacao:obs 
+    }]
 
 
    
       if(inpuMVaue!=0){ 
 
             //Load 
-            document.getElementById('msgLoad').style.cssText='display:flex'
-
+            document.getElementById('msgLoad').style.cssText='display:flex' 
             btnSubmitOrder.setAttribute("disabled", true)
 
-            let intMesaValue=String(parseInt(inpuMVaue))
-          
-
+            let intMesaValue=String(parseInt(inpuMVaue)) 
                 databaseMesas.map((baseMap)=>{ 
                       if(baseMap.mesa==intMesaValue){ //VERIFICA EXISTENCIA  
                           baseMap.orders.map((mapOrders)=>{ 
-                              recebePedidos.push(mapOrders) 
-                              // console.log(mapOrders.idPedido) //id pedidos entregues
+                              recebePedidos.push(mapOrders)  
 
                           }) 
 
@@ -350,6 +344,7 @@
               }) 
 
 
+              // MENSAGEM WHATSAPP PEDIDO MESA
          
               setTimeout(function(){
                     alert('Seu pedido foi entregue ao restaurante')
@@ -467,77 +462,84 @@
         //Load 
         document.getElementById('msgLoad').style.cssText='display:flex'
         btnSubmitOrder.setAttribute("disabled", true)
+
+
+        
+       
+
+
+
  
  
         if(databaseDeliveryArr.length>0){
+          let initF=true  // FALSE PARA MAQUINA DELIVERY
+          let idClient=localStorage.getItem("idClient");
 
+            console.log('DELIVERY TODOS',databaseDeliveryArr)
+            console.log('ID DO CLIENTE',idClient)
+            function orderSend(){ 
+
+              setTimeout(function(){ 
+                alert('Seu pedido foi entregue ao restaurante') 
+                setTimeout(function(){
+                  location.reload() 
+                }, 3000);
+              }, 2000);
+              }
           databaseDeliveryArr.map((mapDataDelivery)=>{ 
-                  let validaName=mapDataDelivery.name===inputUserName.toLowerCase() 
-                      
-                      if(validaName==true){ 
-                          mapDataDelivery.orders.map((mapOrdersDelv)=>{ 
-                            recebePedidos.push(mapOrdersDelv) 
+
+                 
+                  
+                      if(mapDataDelivery.id==idClient){ 
+                          mapDataDelivery.orders.map((ordersMap)=>{ 
+                            recebePedidos.push(ordersMap) 
+                            console.log("Pedidos banco",ordersMap)
+
                           }) 
                       } 
  
                   })
 
-                      allordersBuy.map((atualOrderMap)=>{
-                            recebePedidos.push(atualOrderMap)
-                      })
+                  // PEDIDO DA ULTIMA SESSÃO
+                  allordersBuy.map((atualOrderMap)=>{
+                        recebePedidos.push(atualOrderMap)
+                  })
+                  // VAR TODOS OS PEDIDOS DO CLIENT ID >>>>>>>>>>> recebePedidos
 
-                      let userNameString=inputUserName.toLowerCase().replace(/\s/g, '');
-                      let idClient=localStorage.getItem("idClient");
+                  let userNameString=inputUserName.toLowerCase().replace(/\s/g, '');
 
-                      console.log({  
-                            "name":userNameString,
-                            "id":Math.random() * 100,
-                            "whatsapp":inpuMWhats,
-                            orders:recebePedidos  //<==================Pedidos Recebidos
-                      })
+                      
+                      if(initF==true){ 
+                          // ENVIA PEDIDO DELIVERY
+                          db.collection('delivery').doc(idClient).set({  
+                                "name":userNameString,
+                                "id":idClient,
+                                "whatsapp":inpuMWhats,
+                                orders:recebePedidos   
+                          }) 
 
-                      db.collection('delivery').doc(idClient).set({  
-                            "name":userNameString,
-                            "id":idClient,
-                            "whatsapp":inpuMWhats,
-                            orders:recebePedidos  //<==================Pedidos Recebidos
-                      }) 
-
-                      const horaAtual=relogio()
-                         
-                      db.collection('notificacoes').doc(horaReplace).set({  
-                            "name":userNameString,
-                            "whatsapp":inpuMWhats,
-                            "key":horaReplace,
-
-                            orders:allordersBuy,  //<==================Pedidos Recebidos
-                            hora:horaAtual
-
-                      }) 
-                      // allordersBuy=[]
+                          // ENVIA NOTIFICACAO DELIVERY
+                          db.collection('notificacoes').doc(horaReplace).set({  
+                                "name":userNameString,
+                                "whatsapp":inpuMWhats,
+                                "key":horaReplace, 
+                                orders:allordersBuy,   
+                                hora:horaAtual 
+                          }) 
+                        }
                         
-                    
+                      // ENVIA PEDIDO WHATSAPP
                       setTimeout(function(){ 
                         databaseDeliveryArr.map((delverymap)=>{ 
                           delverymap.orders.map((mapOrdersDelivery)=>{ 
                             
 
-                            allordersBuy.map((atuaIdOrder)=>{
-                              // console.log("ID banco",mapOrdersDelivery.idPedido)
-
-                              console.log("atualID",atuaIdOrder)
+                            allordersBuy.map((atuaIdOrder)=>{  
 
                               if(atuaIdOrder.idPedido===mapOrdersDelivery.idPedido){
-
-
-                                setTimeout(function(){
-                                  alert('Seu pedido foi entregue ao restaurante')
-
-                                  setTimeout(function(){
-                                    location.reload() 
-                                  }, 3000);
  
-                                 }, 2000);
+                                var sendOrder=true
+                              
 
                                 setTimeout(function(){ 
                                
@@ -564,8 +566,10 @@
                                         + " *Total da Compra*: " + "%0a"
                                         + totalCart.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) + "%0a" // Mensagem personalizada
                                       
-                                        window.location.href=url; 
 
+                                        if(initF==true){
+                                          window.location.href=url; 
+                                        }
 
                                 }, 1500);
 
@@ -579,16 +583,9 @@
                         })
                       }, 2000);
 
-
-                      setTimeout(function(){ 
-
-                      }, 2000);
-                    
-
-                      
-                     
-
-
+                      if(sendOrder){
+                        orderSend()
+                      }
 
         }else{ 
 
@@ -600,24 +597,8 @@
                 "whatsapp":inpuMWhats, 
                 orders:allordersBuy  //<==================Pedidos Recebidos
                 
-              }) 
-
-              console.log(
-                {  
-                "name":userNameString,
-                "id":Math.random() * 100, 
-                "whatsapp":inpuMWhats, 
-                orders:allordersBuy  //<==================Pedidos Recebidos
-                
-              }
-              )
-
-              console.log('Primeira Compra',{  
-                "name":userNameString,
-                "id":Math.random() * 100, 
-                "whatsapp":inpuMWhats,
-                orders:allordersBuy  //<==================Pedidos Recebidos
-              })
+              })  
+ 
               const horaAtual=relogio()
               
               db.collection('notificacoes').doc(horaReplace).set({  
@@ -631,16 +612,11 @@
              
               setTimeout(function(){ 
                 databaseDeliveryArr.map((delverymap)=>{ 
-                  delverymap.orders.map((mapOrdersDelivery)=>{ 
-                    
-
-                    allordersBuy.map((atuaIdOrder)=>{
- 
-
+                  delverymap.orders.map((mapOrdersDelivery)=>{  
+                    allordersBuy.map((atuaIdOrder)=>{ 
                       if(atuaIdOrder.idPedido===mapOrdersDelivery.idPedido){
                         setTimeout(function(){
-                                  alert('Seu pedido foi entregue ao restaurante')
-
+                                  alert('Seu pedido foi entregue ao restaurante') 
                                   setTimeout(function(){
                                     location.reload() 
                                   }, 3000);
@@ -660,27 +636,26 @@
       } 
  
  })
+
+
+
+
+//  REQUEST DE DADOS
+
  const currencyMenu=db.collection('cardapio') 
- 
- currencyMenu.onSnapshot((snapshot) => { 
-  
+ currencyMenu.onSnapshot((snapshot) => {  
        var data=[]
         snapshot.forEach((doc) => { 
-          data.push(doc.data()) 
-            
-        }); 
-        console.log(data)
-        getApi(categoriesContainer,data)
-        // localStorage.setItem("cardapio",JSON.stringify(cardapiobd))
-        
+          data.push(doc.data())  
+        });  
+        getApi(categoriesContainer,data)  
     }, (error) => {
             console.log('Erro Notificações')
 
-    });
+    });  
 
- 
- 
- //READ MESAS
+
+ //REQUEST MESAS
     const ordersLab=db.collection('mesasOpen') 
     ordersLab.onSnapshot((snapshot) => {  
       // let databaseMesas=[]
@@ -693,7 +668,7 @@
 
     });
 
- //READ DELIVERYS 
+ //REQUEST DELIVERYS 
     const ordersLabDelivery=db.collection('delivery') 
     ordersLabDelivery.onSnapshot((snapshot) => {  
         snapshot.forEach((doc) => { 
