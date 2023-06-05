@@ -11,6 +11,8 @@ if (localStorage.getItem("lastname")){
 function exitSection(){
 
   localStorage.removeItem("lastname");
+  localStorage.removeItem("idClient");
+
   location.reload() 
 
 }
@@ -29,9 +31,17 @@ function validation(event){
 
   
        if(inputUserName.length>3 & selectValue!=1){
-        localStorage.setItem("lastname", inputUserName);
-        retirada=text;
-        initApp(inputUserName)
+        
+
+          idClient=Math.floor(Math.random() * 2000)
+
+          localStorage.setItem("lastname", inputUserName);
+          localStorage.setItem("idClient", idClient);
+          retirada=text;
+         
+          initApp(inputUserName)
+
+
      
       }else{
         alert('Preencha os Campos')

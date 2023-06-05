@@ -487,6 +487,7 @@
                       })
 
                       let userNameString=inputUserName.toLowerCase().replace(/\s/g, '');
+                      let idClient=localStorage.getItem("idClient");
 
                       console.log({  
                             "name":userNameString,
@@ -494,9 +495,10 @@
                             "whatsapp":inpuMWhats,
                             orders:recebePedidos  //<==================Pedidos Recebidos
                       })
-                      db.collection('delivery').doc(userNameString).set({  
+
+                      db.collection('delivery').doc(idClient).set({  
                             "name":userNameString,
-                            "id":Math.random() * 100,
+                            "id":idClient,
                             "whatsapp":inpuMWhats,
                             orders:recebePedidos  //<==================Pedidos Recebidos
                       }) 
@@ -591,10 +593,10 @@
         }else{ 
 
               let userNameString=inputUserName.toLowerCase().replace(/\s/g, '');
-              
-              db.collection('delivery').doc(userNameString).set({  
+              let idClient=localStorage.getItem("idClient");
+              db.collection('delivery').doc(idClient).set({  
                 "name":userNameString,
-                "id":Math.random() * 100, 
+                "id":idClient, 
                 "whatsapp":inpuMWhats, 
                 orders:allordersBuy  //<==================Pedidos Recebidos
                 
