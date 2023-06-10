@@ -1,5 +1,5 @@
 .produto {
-    display: flex;
+    display: flex !important;
     background-color: #fff;
     border-radius: 10px;
     padding: 0 5px;
