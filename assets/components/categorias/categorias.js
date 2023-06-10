@@ -27,6 +27,7 @@ function openCity(evt, cityName, parent) {
     }
     document.getElementById(cityName).style.display = "block";
     document.getElementById(cityName).childNodes[3].style.display = "block";
+    window.location.href='#categories'
     if (parent){
      
     document.getElementById(parent).style.display = "block";
