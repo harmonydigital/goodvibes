@@ -93,7 +93,7 @@ formaRetirada=()=>{
     })
     allordersBuy=[{ 
         idPedido:Math.floor(Math.random() * 1000).toString(),
-        data:dataHora(),
+        data:dataHoraFormat(),
         hora:relogio(),
         itens:prodsSelct,
         location:locationvalue, 
