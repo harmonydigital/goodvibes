@@ -1,55 +1,62 @@
  
-
-
-getSearch=(event)=>{
-    
-    event.preventDefault()
-
     
     containerSearch = document.getElementById('contentSearch')  
     serchInput = document.getElementById('serchInput')   
     searchResult = document.getElementById('searchResult')   
     containerSearch.classList.toggle("showSearch");
     searchResult.classList.toggle("show");
-    prodsArray=[]
+    closeSearched=document.getElementById('closeSearched') 
    
+
+   
+
+    formNorder=document.getElementById('formOrderNew')
+    formNorder.addEventListener('submit',(event)=>{
+        event.preventDefault()
+    })
+
+    closeSearchedfn=()=>{ 
+        closeSearched.style.cssText="display:none;"
+
+        serchInput.value=''
+        searchResult.innerHTML=''
+    } 
+
     submitSearch=(event)=>{
         let searched=event.target.value  
         const productFound=ProductsFilter(searched)  
         searchResult.innerHTML=`   `;   
-      
-            // if(searched.length<=3){
-            // searchResult.innerHTML="" 
-
-            // }
-          
-            searched.length > 3 ?  render(productFound) :  searchResult.innerHTML="<div>Produto não encontrado</div>"
+       
+            searched.length > 2 ?  render(productFound) :  searchResult.innerHTML="<div>Produto não encontrado</div>"
 
         
       }
       
       
-    data.map((apiData)=>{  
-        apiData.itens.map((itensMap)=>{  
-            itensMap.products.map((productsMap)=>{  
-                prodsArray.push(productsMap)
-
-            }) 
-        }) 
-
-    }) 
          
     ProductsFilter=(searched)=>{
+
         return prodsArray.filter(p=>{
+           
             return p.name.toLowerCase().includes(searched.toLowerCase())  
         })  
     }
+    resetUI=()=>{
+        document.querySelector('div#addOrdersContainer h6').style.cssText='display:block;'
+       
+    }
 
     serchInput.addEventListener('keyup', _.debounce(submitSearch, 500))
- 
+  
+    
 
-    function render(productFound){   
-        
+    function render(productFound){    
+        if (window.matchMedia("(max-width: 700px)").matches){
+            document.querySelector('div#addOrdersContainer h6').style.cssText='display:none;'
+            // document.querySelector('div#addOrdersContainer form label').style.cssText='display:none;'
+        }
+
+        closeSearched.style.cssText="display:flex;"
 
         productFound.map((prodFoundMap)=>{  
         
@@ -75,10 +82,10 @@ getSearch=(event)=>{
             
             `;  
         }) 
+
+        
      }
     
 
   
-   
-}
-
+  

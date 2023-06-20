@@ -1,19 +1,20 @@
 relogio=()=>{
-
+    containerDate=document.getElementById('relogio')
     const data=new Date()
     let hr=data.getHours()
-    let mn=String(data.getMinutes()).padStart(2, '0');
-    let ms=String(data.getSeconds()).padStart(2, '0')
+    let mn=data.getMinutes()
+    let ms=data.getSeconds()
+
 
     let horaatual=hr+":"+mn+":"+ms
+    // console.log(horaatual)
+
+    if(containerDate){
+        containerDate.innerHTML=`<h5>Horário de Brasília `+horaatual+`</h5>`
+    }
 
     return horaatual
-}
-
-a=1
-genarateID=()=>{ 
-    return a+=1
-}
+}   
 dataHora=()=>{
 
     const data=new Date()
@@ -27,7 +28,9 @@ dataHora=()=>{
 //    console.log(dataAtual )
 
    return dataAtual
-}  
+}   
+
+dataHora()
 
 dataHoraFormat=()=>{
 
@@ -42,8 +45,8 @@ dataHoraFormat=()=>{
 //    console.log(dataAtual )
 
    return dataAtual
-}  
+}   
 //  setInterval(relogio(),500)
 
-//  setInterval(genarateID, 500);
- 
+//  setInterval(dataHora, 500);
+
