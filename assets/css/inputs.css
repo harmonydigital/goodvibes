@@ -44,9 +44,6 @@ input::placeholder  {
     display: flex; align-items: center; 
     width: 100%;
 }
-div#cartList .controls {
-    display: none;
-}
 label{ 
                 display: flex;
                 background: white;
