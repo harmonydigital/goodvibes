@@ -81,6 +81,7 @@ div#searchResult.show {
     top: 140px;
     overflow: auto;
     position: fixed;
+    left: 0;
     /* height: auto; */
     padding: 0px 1px;
     height: calc(100% - 10px);
