@@ -56,11 +56,17 @@ function initApp(user){
   userView=document.getElementById('user')
 
   userView.innerHTML= `  
-    <div style="padding: 0 15px; "> 
-     <!-- <img src="assets/images/user.png" alt=""> -->
-     <i style="color:black;" class="fa-regular fa-user"></i>
+<div class="bg-light p-5 rounded mt-3">
+    <h1>Olá, Administrador</h1>
+    <p class="lead">Altere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
+    <a class="btn btn-lg btn-primary" href="/docs/5.0/components/navbar/" role="button">Gerenciar </a>
+  </div>S
 
-        Olá <strong>`+user +`,</strong>
+
+    <div style="padding: 0 15px; "> 
+     <!-- VALIDATION.JS -->
+     <i style="color:black;" class="fa-regular fa-user"></i>
+     Olá <strong>`+user +`,</strong>
     </div>
     <div style="position: absolute;top: 0;right: 0;margin: 25px;color: black; ">
     <button onclick=" exitSection()" ><i class="fa-solid fa-right-from-bracket"></i> sair</button>

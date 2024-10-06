@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="assets/components/banners/banners.css">  
     <link rel="stylesheet" href="assets/components/checkout/checkout.css">   
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6V894RP7L"></script>
   <script>
@@ -34,6 +36,7 @@
   <body>
     
     <div id="list"></div>
+
     <div class="validation" id="validation" >
       <div >
         <button id="btnFullScreen" onclick="fullScreen()"><i style="color: red;" class="fa-solid fa-expand"></i></button>
@@ -101,9 +104,6 @@
       }
       }
       </script>
-    <div class="user" id="user"> 
-    </div>
-    <div class="cart" id="cart">  </div>
 
     <!-- CHECKOUT -->
     <div class="checkout" id="checkout">
@@ -181,62 +181,69 @@
         </div> 
     </div>
 
-    <div class="menu">
-      <ul>
-        <!-- <button><img src="assets/images/UserWhite.png" alt="" srcset=""></button>  -->
-        <button id="cartPreview">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        <!-- <button><img src="assets/images/menu.png" alt="" srcset=""></button> -->
-      </ul>
-    </div>
 
-    <div class="search">
-      <h2>O que deseja pedir hoje?</h2>
-      <form>
-        <!--           
-          <div class="mylabel">
-            <label>  <img src="assets/images/inputs/user.png" style="width: 16px;">
-            </label>
-            <input id="userName" style="margin-bottom: 5px !important;" placeholder="Digite seu nome" type="text" required> 
-          </div> -->
-        <div class="mylabel">
-          <label style="
-            top: 0px;
-            height: 46px;
-            ">  
-          <!-- <img src="assets/images/search.png" alt=""> -->
-          <i class="fa-solid fa-magnifying-glass"></i>  
-          </label>
-          <input  onclick="getSearch(event)" type="text" placeholder="Buscar produtos...">
-          <!-- <i class="fa-solid fa-arrow-right"></i> -->
-        </div>
-        <div id="contentSearch" class="contentSearch">
-          <!-- CONTROLES -->
-          <div class="controls">
-            <button onclick="getSearch(event)">
-              <svg class="svg-inline--fa fa-chevron-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
-                <path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
-              </svg>
-              <!-- <i class="fa-solid fa-chevron-left"></i> Font Awesome fontawesome.com -->
+    <div class="">
+      </div>  
+    <div class="user" id="user"></div>
+    <div class="cart" id="cart">  </div>
+
+
+
+    <header>
+        <!-- Titulo Index.html -->
+        <h2>O que deseja pedir hoje?</h2>
+
+        <div class="menu">
+          <ul> 
+            <button id="cartPreview">
+              <i class="fa-solid fa-cart-shopping"></i>
             </button>
-            <button onclick="getSearch(event)">
-              <svg class="svg-inline--fa fa-xmark" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
-                <path fill="currentColor" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
-              </svg>
-              <!-- <i class="fa-solid fa-xmark"></i> Font Awesome fontawesome.com -->
-            </button>
-          </div>
-          <div class="mylabel" style="position: inherit;width: 100%;margin-top: 50px;margin-bottom: 10px;margin-left: 10px;"> 
-            <label>  
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
-            <input id="serchInput" type="text" placeholder="Digite sua busca"> 
-          </div>
+            
+          </ul>
         </div>
-      </form>
-      <div id="searchResult"></div>
-    </div>
+
+        <div class="search">
+          <form>
+            
+            <div class="mylabel">
+              <label style="
+                top: 0px;
+                height: 46px;
+                ">  
+              <!-- <img src="assets/images/search.png" alt=""> -->
+              <i class="fa-solid fa-magnifying-glass"></i>  
+              </label>
+              <input  onclick="getSearch(event)" type="text" placeholder="Buscar produtos...">
+              <!-- <i class="fa-solid fa-arrow-right"></i> -->
+            </div>
+            <div id="contentSearch" class="contentSearch">
+              <!-- CONTROLES -->
+              <div class="controls">
+                <button onclick="getSearch(event)">
+                  <svg class="svg-inline--fa fa-chevron-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
+                  </svg>
+                  <!-- <i class="fa-solid fa-chevron-left"></i> Font Awesome fontawesome.com -->
+                </button>
+                <button onclick="getSearch(event)">
+                  <svg class="svg-inline--fa fa-xmark" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+                  </svg>
+                  <!-- <i class="fa-solid fa-xmark"></i> Font Awesome fontawesome.com -->
+                </button>
+              </div>
+              <div class="mylabel" style="position: inherit;width: 100%;margin-top: 50px;margin-bottom: 10px;margin-left: 10px;"> 
+                <label>  
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+                <input id="serchInput" type="text" placeholder="Digite sua busca"> 
+              </div>
+            </div>
+          </form>
+          <div id="searchResult"></div>
+        </div>
+
+    </header>
     
     <div id="categories" class="categories"> </div>
   </body>
@@ -739,6 +746,7 @@
     });
 
  </script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
  
     
 </body>
