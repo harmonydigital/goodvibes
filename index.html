@@ -43,7 +43,8 @@
 
       </div>
       <div class="content">
-        <span class="outLine">
+        
+        <span  type="button" class="btn btn-outline-light">
           <i class="fa-brands fa-whatsapp"></i>
           12 99604 8083</span>
         <img src="assets/images/logo.png" alt="">
@@ -54,29 +55,26 @@
           <img class="boy" src="assets/images/motoboy.png" alt="">
 
         </div>
-        <div class="mylabel" hidden>
-          <label style=" top: -2px; height: 48px;bottom: 0;"> 
-            <img src="assets/images/inputs/user.png" style="width: 16px;">
-          </label>
-          <input id="userName" style="margin-bottom: 5px !important;" placeholder="Digite seu nome" type="text" required> 
+        <div class="mylabel">
+          
+          <input id="userName" class="form-control"  placeholder="Digite seu nome" type="text" required> 
         </div>
-        <div class="select mylabel" hidden>
-          <label style="
-            bottom: 0px;
-            height: 46px;
-            width: 40px;  ">  
-          <img src="assets/images/inputs/archive.png"  >
-          </label>
-          <select id="selectValidate" required>
+
+        
+        <div class="select mylabel" >
+          
+          <select class="form-select" id="selectValidate" required>
             <option value="1">Selecione a forma de retirada</option>
             <option value="2">Delivery</option>
             <option value="3">Mesa</option>
           </select>
         </div>
-        <button hidden type="submit" onclick="validation(event)" value="submit">Cardápio
-        <!-- <img src="assets/images/inputs/circle.png"> -->
-        <i class="fa-solid fa-right-to-bracket"></i>
+
+        <button type="submit" onclick="validation(event)" value="submit" class="btn btn-primary" >Cardápio
+
+          <i class="fa-solid fa-right-to-bracket"></i>
         </button>
+        
         <div class="socialmedia">
           <h5> Follow Good Vibes Adega</h5>
           <div class="links">
