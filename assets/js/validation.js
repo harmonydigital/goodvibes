@@ -56,28 +56,53 @@ function initApp(user){
  
   userView=document.getElementById('user')
 
-  userView.innerHTML= `  
+  console.log('user',user)
 
-  <!--VALIDATION -->
-<div class="bg-light p-5 rounded mt-3">
-    <h1>Olá, Administrador</h1>
-    <p class="lead">Altere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
-    <a class="btn btn-lg btn-primary" href="/goodadm/index.html" role="button">Gerenciar </a>
-  </div>S
+  if(user=="1533#"){
+
+    user="Administrador"
+        userView.innerHTML= `  
+
+                <!--VALIDATION -->
+                <div class="bg-light p-5 rounded mt-3">
+                  <h1>Olá, `+user +`</h1>
+                  <p class="lead">Altere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
+                  <a class="btn btn-lg btn-primary" href="/goodadm/index.html" role="button">Gerenciar </a>
+                </div>
 
 
-    <div style="padding: 0 15px; "> 
-     <!-- VALIDATION.JS -->
-     <i style="color:black;" class="fa-regular fa-user"></i>
-     Olá <strong>`+user +`,</strong>
-    </div>
-    <div style="position: absolute;top: 0;right: 0;margin: 25px;color: black; ">
-    <button onclick=" exitSection()" ><i class="fa-solid fa-right-from-bracket"></i> sair</button>
-    <button id="btnFullScreen" onclick="fullScreen()"><i style="color: black !important" class="fa-solid fa-expand"></i></button>
+                <div > 
+                 
+                  <div style="position: absolute;top: 0;right: 0;margin: 25px;color: black; ">
+                  <button onclick=" exitSection()" ><i class="fa-solid fa-right-from-bracket"></i> sair</button>
+                  <button id="btnFullScreen" onclick="fullScreen()"><i style="color: black !important" class="fa-solid fa-expand"></i></button>
 
-</div>
-    
-  `;
+              </div>
+          
+        `;
+}else{
+  userView.innerHTML= `   
+ 
+                <div class="container"> 
+                  <!-- VALIDATION.JS -->
+                  <i style="color:black;" class="fa-regular fa-user"></i>
+                  Olá <strong>`+user +`,</strong>
+                  </div>
+                  <div style="position: absolute;top: 0;right: 0;margin: 25px;color: black; ">
+                  <button onclick=" exitSection()" ><i class="fa-solid fa-right-from-bracket"></i> sair</button>
+                  <button id="btnFullScreen" onclick="fullScreen()"><i style="color: black !important" class="fa-solid fa-expand"></i></button>
+                
+              </div>
+
+              <div class="container">
+              <div class="mt-3">
+                 <h2>O que deseja pedir hoje?</h2>
+              </div>
+              </div>
+               
+          
+        `;
+}
   setTimeout(function init(){
     validateView.style.display="none"
     document.getElementsByTagName('body')[0].style.cssText="overflow:auto;"
