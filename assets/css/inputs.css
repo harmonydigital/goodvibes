@@ -45,7 +45,7 @@ input::placeholder  {
     width: 100%;
 }
 label{ 
-                display: flex;
+                /* display: flex;
                 background: white;
                 width: 45px;
                 height: 48px;
@@ -53,5 +53,5 @@ label{
                 margin: 0;
                 padding: 2px;
                 position: relative;
-                bottom: 3px;
+                bottom: 3px; */
             }

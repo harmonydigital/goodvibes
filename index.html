@@ -53,13 +53,23 @@
           <img class="boy" src="assets/images/motoboy.png" alt="">
 
         </div>
-        <div class="mylabel">
+        <div class=" ">
           
-          <input id="userName" class="form-control"  placeholder="Digite seu nome" type="text" required> 
+
+          <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <div class="form-floating">
+        
+
+              <input id="userName" type="text" class="form-control" id="floatingInputGroup1" placeholder="Digite seu nome" required>
+              <label for="floatingInputGroup1">Digite seu Nome</label>
+            </div>
+          </div>
         </div>
 
+       
         
-        <div class="select mylabel" >
+        <div class="select mylabel" hidden>
           
           <select class="form-select" id="selectValidate" required>
             <option value="1">Selecione a forma de retirada</option>

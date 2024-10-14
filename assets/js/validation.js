@@ -31,7 +31,8 @@ function validation(event){
  
 
   
-       if(inputUserName.length>3 & selectValue!=1){
+       if(inputUserName.length>3 ){
+        // if(inputUserName.length>3 & selectValue!=1){ CONSULTA CAMPO SELECT RETIRADA
         
 
           idClient=Math.floor(Math.random() * 2000)
