@@ -67,7 +67,7 @@ function initApp(user){
                 <div class="bg-light p-5 rounded mt-3">
                   <h1>Olá, `+user +`</h1>
                   <p class="lead">Altere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
-                  <a class="btn btn-lg btn-primary" href="/goodadm/index.html" role="button">Gerenciar </a>
+                  <a class="btn btn-lg btn-primary" href="/goodadm/admin.html" role="button">Gerenciar </a>
                 </div>
 
 
