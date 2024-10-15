@@ -91,15 +91,17 @@ select:invalid { color: red; }
     font-size: 1.0rem;
     border-radius: 10px;
     height: 55px;
-    max-width: 370px;
-    padding: 0 25px;
+    max-width: 100%;
+    padding: 0;
     margin: 10px auto;
     text-transform: capitalize;
     font-weight: bold;
     font-family: 'Lexend Deca', sans-serif;
-    width: 280px;
+    display: block;
+    width: 100%; 
     display: block;
 }
+
 button.btn.btn-primary {
     background: #FED30A !important;
     border-color: #FED30A !important;

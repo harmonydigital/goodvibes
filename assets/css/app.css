@@ -6,6 +6,14 @@ body {
     max-width: 800px; 
     margin: 0 auto;
 }
+a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 400;
+    font-size: 15px  !important;
+}
+
+
 .btn-primary {
     background: #5d00d3 !important;
     border-color: #5d00d3 !important;
