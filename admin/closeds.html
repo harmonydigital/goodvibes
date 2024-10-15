@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas fechadas - Flex Delivery</title> 
+    <link rel="shortcut icon" href="favico.png" type="image/png">
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/components/search/search.css">
+    <link rel="stylesheet" href="assets/components/tableless/tableless.css">
+
+    
+
+</head>
+<body>
+
+   
+    <div id="closedsContainer"> </div> 
+</body>
+<script src="assets/js/all.js"></script>
+
+<script src="assets/components/closeOrder/closedslist.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="assets/js/all.js"></script>
+
+  <script type="module">
+   
+  const firebaseConfig = {
+    apiKey: "AIzaSyDY6JXe0kBoMU2BlrkafuTm6gq1H5LUohY",
+    authDomain: "harmonydigi-24166.firebaseapp.com",
+    projectId: "harmonydigi-24166",
+    storageBucket: "harmonydigi-24166.appspot.com",
+    messagingSenderId: "970946599618",
+    appId: "1:970946599618:web:e13bd162b24dc46718795b"
+  }; 
+
+  firebase.initializeApp(firebaseConfig); 
+  const db = firebase.firestore();
+   //REQUEST NOTIFICAÇÕES 
+
+   const fechamentosData=db.collection('fechamentos')  
+   fechamentosData.onSnapshot((snapshot) => { 
+        let closedData=[]
+        snapshot.forEach((doc) => { 
+            closedData.push(doc.data())   
+            accoutsCloseds(closedData)
+        }); 
+        
+        // ..
+    }, (error) => {
+        // ...
+    });
+</script> 
+</html>
