@@ -278,26 +278,44 @@ function login(){
 
                 /* FLUXO */
                 <div id="login">    
-                    <div class="form">
-                        <img class="logo" src="assets/images/logo.png">
-                        <div>
-                            <h3>Gerencie seus pedidos</h3>
-                        </div>
-                        <form>
+                    <div class="form"> 
+                       
 
-                            <input autofocus autofocusonfocus="inputFocus()" outfocus="inputOutFocus()" type='text' id='nameuser' placeholder='Nome de usuário'>
-                            <input type="password" id="pass" placeholder='Senha' name="password" minlength="4" required>
-                            <button class="btn-bottom" onclick='validationLogin(event, nameuser, pass)'>Entrar</button>
-                            <a style="
-                            margin: 10px auto;
-                            text-decoration: none;
-                            font-size: 14px;
-                        " href=''>Esqueci minha senha!</a>
+                        <form>
+                            <img class="mb-4" src="assets/images/logo.png" alt="" class="img-fluid">
+                            <h1 class="h3 mb-3 fw-normal">Gerencie seus Pedidos</h1>
+
+                            <div class="form-floating">
+                      
+
+                            <input type='text' class="form-control" autofocusonfocus="inputFocus()" id='nameuser' id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating">
+                            
+                            <input type="password" id="pass" class="form-control"  placeholder="Senha" minlength="4" required>
+                            <label for="floatingPassword">Senha</label>
+                            </div>
+
+                            <div class="form-check text-start my-3">
+                            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Remember me
+                            </label>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 py-2" onclick='validationLogin(event, nameuser, pass)'>Entrar</button>
+ 
+                           
+                            <p class="mt-5 mb-3 text-body-secondary"> HarmonyStudio©</p>
+                        </form>
+                        <form>
+                        
+
+                             
                         </form>
                     </div>
-                    <footer>
-                      harmonyCorp©
-                    </footer>
+                     
                 </div>
         `; 
     
