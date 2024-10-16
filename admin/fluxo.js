@@ -275,6 +275,8 @@ function login(){
         if(credentials===null){
         bodyDocument.style.cssText='overflow:hidden;'
         app.innerHTML+=`  
+
+                /* FLUXO */
                 <div id="login">    
                     <div class="form">
                         <img class="logo" src="assets/images/logo.png">
@@ -330,7 +332,7 @@ function login(){
                     sessionStorage.setItem("nameValueStorage",nameValue);
                     bodyDocument.style.cssText='overflow:auto;'
                     
-                }else if(nameValue==='goodvibes' & userPass==='3030'){ 
+                }else if(nameValue==='goodvibes' & userPass==='1533#'){ 
                     
                     admLogin=true  
                     document.getElementById('login').style.cssText="display:none;"
