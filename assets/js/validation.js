@@ -67,7 +67,8 @@ function initApp(user){
                 <div class="bg-light p-5 rounded mt-3">
                   <h1>Olá, `+user +`</h1>
                   <p class="lead">Altere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
-                  <a class="btn btn-lg btn-primary" href="https://harmonydigital.github.io/goodvibes/admin/admin.html" role="button">Gerenciar </a>
+                  <a class="btn btn-lg btn-info" href="https://harmonydigital.github.io/goodvibes/update/index.html" role="button">Meus Produtos </a>
+                  <a class="btn btn-lg btn-primary" href="https://harmonydigital.github.io/goodvibes/admin/admin.html" role="button">Gerênciar Pedidos </a>
                 </div>
 
 
