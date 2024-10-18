@@ -62,13 +62,29 @@ function initApp(user){
 
     user="Administrador"
         userView.innerHTML= `  
-
+ <div class="container"> 
+                  <!-- VALIDATION.JS -->
+                  <i style="color:black;" class="fa-regular fa-user"></i>
+                  Olá <strong>`+user +`,</strong>
+                  </div>
                 <!--VALIDATION -->
-                <div class="bg-light p-5 rounded mt-3">
-                  <h1>Olá, `+user +`</h1>
-                  <p class="lead">Altere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
-                  <a class="btn btn-lg btn-info" href="https://harmonydigital.github.io/goodvibes/update/index.html" role="button">Meus Produtos </a>
-                  <a class="btn btn-lg btn-primary" href="https://harmonydigital.github.io/goodvibes/admin/admin.html" role="button">Gerênciar Pedidos </a>
+                <div class="bg-light p-2 pt-4 pb-4 rounded mt-5">
+                  
+                  <div class='container'>
+                  <div class='row'>
+                  <h1>`+user +`</h1>
+                  <p class="lead">aAltere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
+
+                  </div>
+                    <div class='row'>
+                    <div class='col'>
+                    <a class="btn btn-lg btn-info" href="/update/index.html" role="button">Meus Produtos </a>
+                      </div>
+                    <div class='col'>
+                      <a class="btn btn-lg btn-primary" href="/admin/admin.html" role="button">Meus Pedidos </a>
+                    </div>
+                    </div>
+                  </div>
                 </div>
 
 

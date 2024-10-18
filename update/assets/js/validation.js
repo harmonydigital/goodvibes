@@ -40,14 +40,13 @@ function initApp(user){
   userView.innerHTML= `   
 
     <div>
-      <a href="https://harmonydigital.github.io/flexDelivery/"  style="color: white;
+      <a href="../"  style="color: white;
       font-size: 1.4rem;
       margin: 0px 20px;">
-        <i style="color: #ff253a;" class="fa-solid fa-house"></i>
+        <i  class="fa-solid fa-house"></i>
       </a>
     </div>
-    <div style="padding: 0 15px; "> 
-    <!-- <i class="fa-solid fa-user"></i> -->
+    <div style="padding: 0 15px; ">  
         Olá <strong>`+user +`</strong> 
     </div>
     <div style="position: absolute;top: 0;right: 0;margin: 30px;color: black; ">
@@ -55,7 +54,7 @@ function initApp(user){
     </div>
     
   `;
-//  
+  
 }
 
 initApp('Administrador')
