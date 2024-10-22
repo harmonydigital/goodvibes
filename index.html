@@ -155,44 +155,39 @@
               Forma de retirada:
               </label> 
               <div class="mylabel select">
-                <label>
-                <img src="assets/images/inputs/archive.png" >
-                </label>
-                <select onchange="formaRetirada()" id="selectCheckout">
+               
+                <select class="form-select" aria-label="Large select example" onchange="formaRetirada()" id="selectCheckout">
                   <option value="1">Selecione a forma de retirada</option>
                   <option value="balcao">Delivery</option>
                   <option value="mesa">Mesa</option>
                 </select>
               </div>
-              <div id="setMesa" class="mylabel"  style="display:none">
-                <label style="height:48px;"> 
-                <img src="assets/images/inputs/mesa.png"  >  
-                </label>
-                <input id="inputMesa"  type="number" placeholder="Digite o numero da mesa">
+
+ 
+
+
+              <div id="setMesa" class="input-group input-group-lg"  style="display:none">
+                
+                <input class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="inputMesa"  type="number" placeholder="Digite o numero da mesa">
               </div>
               <div id="whatsappId"  style="display: none; ">
                 <!-- <span>Receba notificação via whatsapp </span> -->
                 <div id="setPhone" class="mylabel" >
-                  <label style="height:48px;">   
-                  <i class="fa-solid fa-location-dot"></i>
-                  </label>
-                  <input id="inputLocation"  type="text" placeholder="Endereço de entrega..."  >
+                  
+                  <input id="inputLocation"  type="text" placeholder="Endereço de entrega..." class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" >
                 </div>
 
                 <div id="setEnd" class="mylabel" >
-                  <label style="height:48px;">  
-                  <img src="assets/images/inputs/whats.png" >  
-                  </label>
-                  <input id="inputMesa"  type="number" placeholder="Numero celular whatsapp">
+                   
+                  <input id="inputMesa"  type="number" placeholder="Numero celular whatsapp" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 </div>
               </div>
               
             </div>
-            <div style="position: relative;">
-                  <label> 
-                  Observações do Pedido:
-                  </label>
-                  <textarea id="areaObs" placeholder="Digite observações do seu pedido"></textarea>
+ 
+            <div class=" "  >
+            
+                  <textarea id="areaObs" placeholder="Digite observações do seu pedido" class="form-control" aria-label="With textarea"></textarea>
                 </div>
                 <div id="mgg"></div>
                 <div class="total" id="totalfinesh"> 
