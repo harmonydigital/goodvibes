@@ -59,6 +59,7 @@ function initApp(user){
   console.log('user',user)
 
   if(user=="1533#"){
+    console.log(path)
 
     user="Administrador"
         userView.innerHTML= `  
@@ -78,7 +79,7 @@ function initApp(user){
                   </div>
                     <div class='row'>
                     <div class='col'>
-                    <a class="btn btn-lg btn-info" href="/update/index.html" role="button">Meus Produtos </a>
+                    <a class="btn btn-lg btn-info" href="`+path +`/update/index.html" role="button">Meus Produtos </a>
                       </div>
                     <div class='col'>
                       <a class="btn btn-lg btn-primary" href="/admin/admin.html" role="button">Meus Pedidos </a>
