@@ -12,7 +12,7 @@ inpuMWhats=""
  
 function showNumber(){  var n=100;  return n+=1 }
 getCheckout=()=>{ 
- 
+ console.log('checkout')
 
     select=document.getElementById('selectValidate')
     text = select.options[select.selectedIndex].text;
