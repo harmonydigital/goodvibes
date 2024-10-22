@@ -37,8 +37,12 @@
   <script>  
 
     var url = window.location;
-    var path = window.location.host; 
-
+    var path = window.location; 
+    if(path.host=="harmonydigital.github.io"){
+      path=path.host
+    }else{
+      path=""
+    }
   </script>
   <body>
     
