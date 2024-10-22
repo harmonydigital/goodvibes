@@ -36,14 +36,16 @@
 function initApp(user){
  
   userView=document.getElementById('user')
+  console.log(path)
 
   userView.innerHTML= `   
 
     <div>
-      <a href="../"  style="color: white;
+      <a href="javascript:void(0)"  onclick="history.back()"  style="color: white;
       font-size: 1.4rem;
       margin: 0px 20px;">
         <i  class="fa-solid fa-house"></i>
+         
       </a>
     </div>
     <div style="padding: 0 15px; ">  
