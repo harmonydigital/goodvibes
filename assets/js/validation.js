@@ -74,7 +74,7 @@ function initApp(user){
                   <div class='container'>
                   <div class='row'>
                   <h1>`+user +`</h1>
-                  <p class="lead">aAltere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
+                  <p class="lead">Altere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
 
                   </div>
                     <div class='row'>
