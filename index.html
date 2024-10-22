@@ -40,8 +40,11 @@
     var path = window.location; 
     if(path.host=="harmonydigital.github.io"){
       path=path.host
+      console.log("prod",path)
     }else{
       path=""
+      console.log("local",path)
+
     }
   </script>
   <body>
