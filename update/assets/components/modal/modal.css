@@ -1,6 +1,6 @@
  
  .modal{ 
-    display: block !important;
+    /* display: block !important; */
     position: fixed;
     background: #f5f5f5;
  }

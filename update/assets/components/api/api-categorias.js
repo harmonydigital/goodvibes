@@ -80,7 +80,7 @@ fullScreen=()=>{
     data.map((apiData)=>{ 
         container.childNodes[1].innerHTML += ` 
 
-            <button key="`+apiData.id+`" class="tablinks" onclick="openCity(event, '`+apiData.id +`')">
+            <button key="`+apiData.id+`" class="tablinks btn btn-outline-secondary" onclick="openCity(event, '`+apiData.id +`')">
                 <img class="img1" src=" `+apiData.image +`" alt="">
                 <img class="img2"  src=" `+apiData.image2 +`" alt="">
                 `+apiData.name +`
@@ -112,7 +112,7 @@ fullScreen=()=>{
 
             subs.innerHTML+= ` 
                  <div class="swiper-slide"> 
-                    <button class="tablinks" onclick="openCity(event, '`+itensMap.id +`', '`+apiData.id +`')">`+itensMap.name +`</button> 
+                    <button class="tablinks btn btn-outline-secondary" onclick="openCity(event, '`+itensMap.id +`', '`+apiData.id +`')">`+itensMap.name +`</button> 
                  </div>
             `;
            
@@ -124,7 +124,8 @@ fullScreen=()=>{
             document.getElementById(apiData.id.toString()).innerHTML+= ` 
                
                 <div id="`+tabContentMap.id +`" class="tabcontent">   
-                    <button key=`+tabContentMap.id +` onclick="createProd(event)" class='btn addProd'><i class="fa-solid fa-bottle-droplet"></i> ADICIONAR PRODUTOS EM `+tabContentMap.name    +` </button>  
+                    <button key=`+tabContentMap.id +` onclick="createProd(event)" type="button" class="btn btn-info btn-lg w-100"  >
+                     Adicionar  `+tabContentMap.name    +` </button>  
 
                 </div>
 
@@ -138,7 +139,7 @@ fullScreen=()=>{
 
                     Contentsubs.innerHTML+= `  
                         <div class="produto">
-                                <img src="`+productsMap.img +`" alt="" style="display:none;" ></img>
+                                <img src="`+productsMap.img +`" alt="" ></img>
                           
                                 <div class="prod-val">
                                 <h3 class="title-prod">`+productsMap.name +`</h3> 
@@ -146,10 +147,12 @@ fullScreen=()=>{
                             </div>
 
                             <div class="editProd" >
-                                <button key="`+productsMap.id +`" onclick="editPrd(this,`+productsMap.id +`); "><i class="fa-regular fa-pen-to-square"></i></button>
+                                <button  
+                                type="button" class="btn btn-primary" key="`+productsMap.id +`" 
+                                onclick="editPrd(this,`+productsMap.id +`); "><i class="fa-regular fa-pen-to-square"></i> Editar</button>
                                 
                                 <button key="`+productsMap.id +`" onclick="removeProd(this,`+productsMap.id +`); ">
-                                <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-solid fa-trash"></i>
                                 </button>
               
                             </div>
