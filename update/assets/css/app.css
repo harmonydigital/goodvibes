@@ -1,4 +1,7 @@
  
+.editProd button:last-child {
+    display: none;
+}
 button#btnFullScreen {
     background: transparent;
     color: white;

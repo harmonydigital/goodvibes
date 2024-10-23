@@ -2,7 +2,7 @@ tabledatatest=[]
 data=[]
 prodsArray=[]
 prodsSelct=[]
- 
+
 requestMenuRest=(dataMenuRes)=>{
 
     dataMenuRes.map((apiData)=>{ 

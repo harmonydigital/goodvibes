@@ -76,8 +76,7 @@ input::-webkit-input-placeholder { /* Edge */
 label{ 
                 display: flex;
                 background: white;
-                width: 45px;
-                height: 48px;
+            
                 border-radius: 40px 0 0 40px;
                 margin: 0;
                 padding: 2px;

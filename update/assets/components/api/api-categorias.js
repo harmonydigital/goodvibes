@@ -7,6 +7,7 @@ STATUSMESA=false
 
 
 
+console.log(  data )
 
 btnSubmitformSalvar=document.getElementById('btnSalvar')
   
