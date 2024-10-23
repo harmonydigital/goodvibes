@@ -1,42 +1,8 @@
- 
-// validateView=document.getElementById('validation')
 
-// if (localStorage.getItem("lastname")){
-//   validateView.style.display="none"
-//   initApp(localStorage.getItem("lastname"))
-//   inputUserName=localStorage.getItem("lastname")
-  
-// }
-
-// function validation(event){
-
-//      event.preventDefault()
-//      var select=document.getElementById('selectValidate')
-//      var selectValue=select.options[select.selectedIndex].value
-//      var validateView=document.getElementById('validation')
-//      var userView=document.getElementById('user')
-//        inputUserName=document.getElementById('userName').value
-   
-//        text = select.options[select.selectedIndex].text;
- 
-
-  
-//        if(inputUserName.length>3 & selectValue!=1){
-//         localStorage.setItem("lastname", inputUserName);
-//         retirada=text;
-//         initApp(inputUserName)
-     
-//       }else{
-//         alert('Preencha os Campos')
-  
-//       }
-
-
-// }
 function initApp(user){
  
   userView=document.getElementById('user')
-  console.log(path)
+  
 
   userView.innerHTML= `   
 

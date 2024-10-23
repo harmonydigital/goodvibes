@@ -1,21 +1,25 @@
- data=[]
+data=[]
 database=[]
 msgLoadContainer=document.getElementById('msgLoad')
 var apiContainer=document.getElementById('api') 
 var categoriesContainer=document.getElementById('categories') 
 STATUSMESA=false
 
-btnSubmitformSalvar=document.getElementById('btnSalvar')
-console.log(document.getElementById('btnSalvar'))
 
+
+
+btnSubmitformSalvar=document.getElementById('btnSalvar')
+  
+
+
+console.log('status')
+
+//FUNCTIONS 
 
 modalToggole=()=>{
     modalElement=document.getElementById('modalcontainer') 
-    if(modalElement){ 
-        return modalElement.classList.toggle('show')
-    }else{
-        return console.log('modal não encontrado...')
-    }
+  modalElement.classList.toggle('show')
+      
 }
 
 fullScreen=()=>{
@@ -249,8 +253,7 @@ apiData.itens.map((itensMap)=>{
     var submitbtn=document.getElementById('btnSalvar')   
     const key=event.target.getAttribute('key')   
     var h2Title=document.querySelector('.modal h2') 
-    // 
-    h2Title.innerHTML='Novo produto.'  
+    //   h2Title.innerHTML='Novo produto.'  
     submitbtn.setAttribute('key',key) 
 
     submitbtn.setAttribute('status','create')
@@ -271,7 +274,7 @@ apiData.itens.map((itensMap)=>{
  
         // conso.le.log(ProdThis, inputProd)
         var h2Title=document.querySelector('.modal h2')
-        h2Title.innerHTML='Editar produto.'
+        // h2Title.innerHTML='Editar produto.'
 
         idProdThis=false
         var key=ProdThis.getAttribute('key')

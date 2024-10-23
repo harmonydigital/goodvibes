@@ -29,11 +29,13 @@
 
   var url = window.location;
   var path = window.location.host; 
-console.log(path)
+ 
 </script>
 <body>
   
-  <!-- <button id="deleteOrder">Delete Order</button>  -->
+  
+  
+  
   <div id="list"></div>
    
   <div class="user" id="user"> 
@@ -96,8 +98,7 @@ console.log(path)
   </div>
   <div class="menu">
     <ul>
-      <!-- <button >+</button>  -->
-
+      
       <form class="updateMenu" >
         <button  > 
           <i class="fa-solid fa-paper-plane"></i>
@@ -105,9 +106,7 @@ console.log(path)
         </button> 
       </form>
 
-      <!-- <button id="cartPreview"><img src="assets/images/shopping-cart.png" alt="" srcset=""></button> -->
-      <!-- <button><img src="assets/images/menu.png" alt="" srcset=""></button> -->
-    </ul>
+     </ul>
   </div>
   
   <div class="search">
@@ -120,13 +119,7 @@ console.log(path)
       </div>
     </div>
     <form hidden>
-      <!--           
-        <div class="mylabel">
-          <label>  <img src="assets/images/inputs/user.png" style="width: 16px;">
-          </label>
-          <input id="userName" style="margin-bottom: 5px !important;" placeholder="Digite seu nome" type="text" required> 
-        </div> -->
-      <div class="mylabel">
+       <div class="mylabel">
         <label style="
           top: 0px;
           height: 46px;
@@ -163,33 +156,36 @@ console.log(path)
     <div id="searchResult"></div>
   </div>
  
-  <div style="display:none;" class="banners">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="assets/images/bannercamarao.png" alt="" >
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/images/bannerdrinks.png" alt="" >
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/images/bannercerveja.png" alt="" >
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/images/bannertapioca.png" alt="" >
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/images/bannerpanqueca.png" alt="" >
-        </div>''
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
+ 
+  
+  <!-- CATEGORIAS -->
   <div id="categories" class="categories"> </div>
 
   <!-- MODAL -->
   <div class="modal-container" id="modalcontainer">
-    <div class="modal">
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="">
       <div class="controls"> 
         <button onclick="modalToggle()"><svg class="svg-inline--fa fa-chevron-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path></svg><!-- <i class="fa-solid fa-chevron-left"></i> Font Awesome fontawesome.com --></button>
         <button onclick="modalToggle()"><svg class="svg-inline--fa fa-xmark" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path></svg><!-- <i class="fa-solid fa-xmark"></i> Font Awesome fontawesome.com --></button>  
@@ -257,7 +253,7 @@ console.log(path)
  <script src="assets/js/validation.js"></script>
  <script src="assets/js/cart.js"></script>
  <script src="assets/components/swiper/swiper.js"></script>
- <script src="assets/js/app.js"></script>
+ <!-- <script src="assets/js/app.js"></script> -->
  <script src="assets/components/modal/modal.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
