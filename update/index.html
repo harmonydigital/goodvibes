@@ -110,14 +110,7 @@
   </div>
   
   <div class="search">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h1 >Produtos</h1>
-
-        </div>
-      </div>
-    </div>
+  
     <form hidden>
        <div class="mylabel">
         <label style="
@@ -163,14 +156,18 @@
 
   <!-- MODAL -->
   <div class="modal" id="modalcontainer">
-    
+    <div class="controls"> 
+      <button type="button" class="btn " onclick="modalToggole()"> 
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+        <button type="button" class="btn " onclick="modalToggole()"> 
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+    </div>
     <div class="modal-dialog">
 
-      <div class="controls"> 
-        <button onclick="modalToggle()"> voltar</button>
-          <button onclick="modalToggle()"> x</button>
-          
-      </div>
+     
 
    
         <div class="modal-content">
@@ -200,7 +197,8 @@
       
               </div>  
       
-              <button id="btnSalvar">ok</button>
+              <button type="button" class="btn btn-warning btn-lg w-100 mt-4" id="btnSalvar">Salvar</button>
+              <button type="button" class="btn btn-link btn-lg w-100 mt-3" onclick="modalToggole()" id="btnSalvar">Cancelar</button>
             </form>
           </div>
          

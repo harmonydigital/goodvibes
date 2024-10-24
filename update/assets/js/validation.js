@@ -5,21 +5,16 @@ function initApp(user){
   
 
   userView.innerHTML= `   
-
-    <div>
-      <a href="javascript:void(0)"  onclick="history.back()"  style="color: white;
-      font-size: 1.4rem;
-      margin: 0px 20px;">
-        <i  class="fa-solid fa-house"></i>
-         
-      </a>
+<div class="controls d-flex align-items-center"> 
+      <button type="button" class="btn "  onclick="history.back()"> 
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <h6> Editar Produtos</h6>
+         <button id="btnFullScreen" onclick="fullScreen()"><i style="color: black !important" class="fa-solid fa-expand"></i></button>
+    
     </div>
-    <div style="padding: 0 15px; ">  
-        Olá <strong>`+user +`</strong> 
-    </div>
-    <div style="position: absolute;top: 0;right: 0;margin: 30px;color: black; ">
-      <button id="btnFullScreen" onclick="fullScreen()"><i style="color: black !important" class="fa-solid fa-expand"></i></button>
-    </div>
+    
+  
     
   `;
   

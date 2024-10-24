@@ -283,7 +283,7 @@ apiData.itens.map((itensMap)=>{
         idProdThis=false
         var key=ProdThis.getAttribute('key')
         var modal=document.querySelector('.modal-container')
-        modal.classList.toggle('show')
+        document.getElementById('modalcontainer').classList.toggle('show')
      
         var submitbtn=document.getElementById('btnSalvar')   
 

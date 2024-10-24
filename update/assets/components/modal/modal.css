@@ -4,6 +4,9 @@
     position: fixed;
     background: #f5f5f5;
  }
+ .modal.show{
+    display: block;
+ }
 .editProd svg {
     font-size: 1.4rem;
     margin: 15px;
@@ -12,23 +15,7 @@
 .editProd button { 
     margin: 0 10px;
 }
-button#btnSalvar {
-    background: #FED30A;
-    color: black;
-    margin: 40px auto;
-    font-size: 1.0rem;
-    border-radius: 20px;
-    height: 55px;
-    padding: 0 25px;
-    margin: 20px auto 0;
-    text-transform: capitalize;
-    font-weight: bold;
-    font-family: 'Lexend Deca', sans-serif;
-    display: flex;
-    align-items: center;
-    width: 240px;
-    justify-content: center;
-}
+ 
 .modal .mylabel  label{
     border: 1px solid;
     border-right: 0;
