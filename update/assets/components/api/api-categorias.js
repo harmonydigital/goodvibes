@@ -124,7 +124,7 @@ fullScreen=()=>{
             document.getElementById(apiData.id.toString()).innerHTML+= ` 
                
                 <div id="`+tabContentMap.id +`" class="tabcontent">   
-                    <button key=`+tabContentMap.id +` onclick="createProd(event)" type="button" class="btn btn-info btn-lg w-100"  >
+                    <button key=`+tabContentMap.id +` onclick="createProd(event)" type="button" class="btn btn-info btn-lg w-100 add-btn"  >
                      Adicionar  `+tabContentMap.name    +` </button>  
 
                 </div>
@@ -275,30 +275,35 @@ apiData.itens.map((itensMap)=>{
 
 
    editPrd=(ProdThis, inputProd)=>{
- 
-        // conso.le.log(ProdThis, inputProd)
+  
         var h2Title=document.querySelector('.modal h2')
-        // h2Title.innerHTML='Editar produto.'
-
+         
         idProdThis=false
         var key=ProdThis.getAttribute('key')
+
+
+        
         var modal=document.querySelector('.modal-container')
         document.getElementById('modalcontainer').classList.toggle('show')
      
         var submitbtn=document.getElementById('btnSalvar')   
 
+        
+        // type update flag
         submitbtn.setAttribute('status','update')
-          input=document.getElementById(inputProd)
-          inputSearch=document.getElementById(inputProd+'search')
+
+
+        input=document.getElementById(inputProd)
+        inputSearch=document.getElementById(inputProd+'search')
           
       
         data.map((apiData)=>{   
             apiData.itens.map((itensMap)=>{     
                  itensMap.products.map((productsMap)=>{ 
-                
+              
+                     
                
-                //   ADIÇÃO
-                    
+            
                 //   EDIÇÃO
                   if(productsMap.id==key ){
                     idProdThis=key
@@ -322,11 +327,8 @@ apiData.itens.map((itensMap)=>{
     
        
         
-      
-        //  modalForm.addEventListener('submit',function(e){ 
-        //     e.preventDefault()
-        //     upDateProd()
-        // })
+       
+        
   } 
  
   
@@ -340,7 +342,7 @@ apiData.itens.map((itensMap)=>{
                  itensMap.products.map((productsMap)=>{    
                         if(productsMap.id==idProdThis){ 
                                 productsMap.name=inputNome.value
-                                // productsMap.price=parseInt(inputPrice.value).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+                                ///// productsMap.price=parseInt(inputPrice.value).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
                                 productsMap.price=inputPrice.value  
                         }
                     
@@ -349,11 +351,15 @@ apiData.itens.map((itensMap)=>{
     
          }) 
      
+            db.collection('cardapio').doc('cardapioatual').set({dataProd:data})
          
          getApi(categoriesContainer,data, false)
         
 
-  }
+    }
+
+
+
  refrashCart=(inputProd)=>{ 
      
 

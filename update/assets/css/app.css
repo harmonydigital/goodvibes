@@ -1,4 +1,6 @@
- 
+body{
+    background-color: #f7f7f7 !important;
+} 
 .editProd button:last-child {
     display: none;
 }
@@ -71,8 +73,7 @@ div#cart .controls {
 }
  
 .controls {
-    position: absolute;
-    top: 0;
+     
     display: flex;
     justify-content: space-between;
     width: 100%;

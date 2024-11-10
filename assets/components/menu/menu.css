@@ -1,4 +1,6 @@
 .menu {
+    
+
     width: 100%;
     background: #FED30A;
     height: 65px;
@@ -7,6 +9,9 @@
     left: 0px;
     bottom: 0px;
     border-radius: 10px 10px 0px 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 .menu ul {
     display: flex;

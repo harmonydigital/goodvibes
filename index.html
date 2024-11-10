@@ -222,7 +222,9 @@
 
 
     <header>
-       
+      <div class="container">
+         
+      
 
         <div class="menu">
           <ul> 
@@ -234,18 +236,18 @@
         </div>
 
         <div class="search">
+          <form class="d-flex">
+            <input  onclick="getSearch(event)" type="text" placeholder="Buscar produtos...">
+
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+         
+          </form>
           <form>
             
             <div class="mylabel">
-              <label style="
-                top: 0px;
-                height: 46px;
-                ">  
-              <!-- <img src="assets/images/search.png" alt=""> -->
-              <i class="fa-solid fa-magnifying-glass"></i>  
-              </label>
-              <input  onclick="getSearch(event)" type="text" placeholder="Buscar produtos...">
-              <!-- <i class="fa-solid fa-arrow-right"></i> -->
+              
+            
             </div>
             <div id="contentSearch" class="contentSearch">
               <!-- CONTROLES -->
@@ -274,9 +276,16 @@
           <div id="searchResult"></div>
         </div>
 
+
+      </div>   
+
     </header>
     
-    <div id="categories" class="categories"> </div>
+
+    <div class="container"> 
+      <div id="categories" class="categories"> </div>
+    </div>   
+
   </body>
       
   
@@ -305,12 +314,12 @@
  <script type="module">
  
     const firebaseConfig = {
-      apiKey: "AIzaSyCBwlcWdpR45BsCFFU1YkTQ6WyPoNGwOro",
-      authDomain: "good-b24f4.firebaseapp.com",
-      projectId: "good-b24f4",
-      storageBucket: "good-b24f4.appspot.com",
-      messagingSenderId: "612581416071",
-      appId: "1:612581416071:web:e542aa58407cdd8899ec22"
+      apiKey: "AIzaSyBSmJAJ7i6uYot9x4MW3gfYR_jNKp0O-_0",
+      authDomain: "harmonydigi-24166.firebaseapp.com",
+      projectId: "harmonydigi-24166",
+      storageBucket: "harmonydigi-24166.firebasestorage.app",
+      messagingSenderId: "970946599618",
+      appId: "1:970946599618:web:cbc5169ad9f50e2518795b"
     }; 
 
       // Initialize Firebase

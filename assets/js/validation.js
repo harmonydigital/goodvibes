@@ -64,12 +64,12 @@ function initApp(user){
     user="Administrador"
         userView.innerHTML= `  
  <div class="container"> 
-                  <!-- VALIDATION.JS -->
-                  <i style="color:black;" class="fa-regular fa-user"></i>
+                  <!-- VALIDATION -->
+                  <i class="fa-regular fa-user"></i>
                   Olá <strong>`+user +`,</strong>
                   </div>
                 <!--VALIDATION -->
-                <div class="bg-light p-2 pt-4 pb-4 rounded mt-5">
+                <div class=" p-2 pt-4 pb-4 rounded mt-5">
                   
                   <div class='container'>
                   <div class='row'>
@@ -77,13 +77,18 @@ function initApp(user){
                   <p class="lead">Altere seu cardápio, adicione novos produtos e gerencie seus pedidos.</p>
 
                   </div>
-                    <div class='row'>
-                    <div class='col'>
-                    <a class="btn btn-lg btn-info" href="`+path+`/update" role="button">Meus Produtos </a>
+                    <div class='container'>
+                      <div class='row'>
+
+                          <div class='col col-lg-3 d-flex justify-content-between'>
+                              <a class="btn btn-lg btn-info" href="`+path+`/update" role="button">Meus Produtos </a>
+                              <a class="btn btn-lg btn-primary" href="`+path+`/admin/admin.html" role="button">Meus Pedidos </a>
+                        
+                              </div>
+
+                        
+                      
                       </div>
-                    <div class='col'>
-                      <a class="btn btn-lg btn-primary" href="`+path+`/admin/admin.html" role="button">Meus Pedidos </a>
-                    </div>
                     </div>
                   </div>
                 </div>

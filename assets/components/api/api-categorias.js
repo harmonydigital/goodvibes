@@ -22,19 +22,16 @@ var apiContainer=document.getElementById('api')
 var categoriesContainer=document.getElementById('categories') 
 STATUSMESA=false
 
-// JSON.parse(localStorage.getItem("cardapio")).map((cardBdmap)=>{
-//     cardBdmap.data.map((allDataBd)=>{
-       
-//         data.push(allDataBd)
-//     })
-// })
-
+ 
 
  getApi=(container, databd)=>{
 
     container.innerHTML =` <div class="tab"> </div>`;
     prods=""
     getdatabd=databd
+
+
+    console.log('data',databd)
   
     if(data.length==0){
         getdatabd.map((databdMap)=>{
@@ -430,6 +427,7 @@ closeCheckout=()=>{
 
     ///update
    
+
 openTable=()=>{
     setTimeout(function(){
 
